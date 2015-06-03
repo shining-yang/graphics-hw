@@ -1,6 +1,7 @@
 //
 // File: main.cpp
 // Application entry-point.
+// y.s.n@live.com, 2015-06-03
 //
 #include "gl/glut.h"
 
