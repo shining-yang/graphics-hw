@@ -5,7 +5,7 @@
 //
 
 #include <math.h>
-#include "gl/glut.h"
+#include "GL/glut.h"
 
 static const GLfloat PI = 3.14159265f;
 static const GLfloat g_arrayVertex[][2] = {
