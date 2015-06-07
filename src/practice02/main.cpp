@@ -33,6 +33,7 @@ void display()
     // Line | Polygon
     glColor3f(1.0f, 0.0f, 0.0f);
     glLineWidth(2.0f);
+    glDisable(GL_LINE_STIPPLE);
     glPolygonMode(GL_BACK, GL_LINE);
     glBegin(GL_POLYGON);
     for (int i = 0; i < sizeof(g_arrayVertex) / sizeof(g_arrayVertex[0]); i++) {
@@ -43,6 +44,8 @@ void display()
     // Circle
     glColor3f(0, 0, 1);
     glPointSize(1);
+    glEnable(GL_LINE_STIPPLE);
+    glLineStipple(1, 0x0F0F);
     glBegin(GL_LINE_LOOP);
     int share = 360;
     for (int i = 0; i < share; i++) {
