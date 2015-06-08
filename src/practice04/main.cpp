@@ -53,7 +53,7 @@ int main(int argc, char* argv[])
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE);
     glutInitWindowPosition(100, 100);
-    glutInitWindowSize(600, 400);
+    glutInitWindowSize(600, 600);
     glutCreateWindow("Point Line Polygon Circle");
     glutDisplayFunc(display);
     glutMainLoop();
