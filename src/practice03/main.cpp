@@ -1,6 +1,6 @@
 //
 // File: main.cpp
-// Program entry point to demostrate GL
+// Program entry point to demonstrate GL
 // y.s.n@live.com, 2015-06-05
 //
 
