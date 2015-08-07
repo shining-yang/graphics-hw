@@ -20,7 +20,7 @@
 //
 #include "GL/glut.h"
 
-static int day = 200;
+static int day = 1;
 // day的变化：从0到359
 void display(void)
 {
@@ -46,6 +46,8 @@ void display(void)
     glTranslatef(38000000, 0.0f, 0.0f);
     glutSolidSphere(4345000, 20, 20);
     glFlush();
+
+	day = (day + 1) % 360 + 1;
 }
 
 int main(int argc, char* argv[])
