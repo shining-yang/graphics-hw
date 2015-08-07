@@ -47,17 +47,28 @@ void display(void)
     glutSolidSphere(4345000, 20, 20);
     glFlush();
 
-	day = (day + 1) % 360 + 1;
+	glutSwapBuffers();
+}
+
+void idleFunc()
+{
+	static int _count = 0;
+	if (_count++ % 20000 == 0) {
+		day++;
+		day %= 360;
+		display();
+	}
 }
 
 int main(int argc, char* argv[])
 {
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE);
+    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
     glutInitWindowPosition(100, 100);
     glutInitWindowSize(600, 600);
     glutCreateWindow("Point Line Polygon Circle");
     glutDisplayFunc(display);
+	glutIdleFunc(idleFunc);
     glutMainLoop();
     return 0;
 }
